@@ -14,7 +14,7 @@ import {
   Stack,
   Drawer as TempDrawer,
 } from "@mui/material/";
-import AdbIcon from "@mui/icons-material/Adb";
+import DeliveryDiningIcon from '@mui/icons-material/DeliveryDining';
 import { Menu as MenuIcon, ShoppingBag } from "@mui/icons-material/";
 import { Link } from "react-router-dom";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
@@ -22,7 +22,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { selectCart, useAppDispatch } from "../store";
 import { useSelector } from "react-redux";
 import { removeFromCart } from "../reducers/cart-reducer";
-import { formatCurrency } from "../utilities/formatCurrency";
+import { formatCurrency } from "../utilities/formatCurrency"
 
 const ResponsiveAppBar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
@@ -38,10 +38,10 @@ const ResponsiveAppBar = () => {
   const qtyBadge = (cart.products.map( el => el.qty )).reduce( ( t,n ) => t+n,0 )
   return (
     <>
-      <AppBar position="static">
+      <AppBar position="static" sx={{margin:0}}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+            <DeliveryDiningIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
             <Typography
               variant="h6"
               noWrap
@@ -57,7 +57,7 @@ const ResponsiveAppBar = () => {
                 textDecoration: "none",
               }}
             >
-              LOGO
+              DELIVERY  
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -100,7 +100,7 @@ const ResponsiveAppBar = () => {
                 </MenuItem>
               </Menu>
             </Box>
-            <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+            <DeliveryDiningIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
             <Typography
               variant="h5"
               noWrap
@@ -117,7 +117,7 @@ const ResponsiveAppBar = () => {
                 textDecoration: "none",
               }}
             >
-              LOGO
+              DELIVERY  
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               <Button

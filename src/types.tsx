@@ -1,6 +1,5 @@
 import store from "./store"
 
-
 export type CartSliceState = {
     total: number
     products:CartProduct[]
